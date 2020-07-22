@@ -6,8 +6,6 @@
 trigger:
 - master
 
-pool: 'windows-latest'
-
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
