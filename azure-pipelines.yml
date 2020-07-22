@@ -21,3 +21,4 @@ steps:
     templateLocation: 'Linked artifact'
     csmFile: 'script/deployTemplate.json'
     deploymentMode: 'Incremental'
+    deploymentName: 'DeployEmptyTemplate'
