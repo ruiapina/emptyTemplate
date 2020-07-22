@@ -19,6 +19,6 @@ steps:
     resourceGroupName: 'PipelineDEV'
     location: 'West Europe'
     templateLocation: 'Linked artifact'
-    csmFile: 'script/deployTemplate.json'
+    csmFile: 'script/azuredeploy.json'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployEmptyTemplate'
