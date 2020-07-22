@@ -20,6 +20,5 @@ steps:
     location: 'West Europe'
     templateLocation: 'Linked artifact'
     csmFile: 'script/azuredeploy.json'
-    overrideParameters: '-projectName AzureRmPipeline -linkedTemplateUri https://raw.githubusercontent.com/ruiapina/emptyTemplate/master/script/azuredeploy.parameters.json'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployEmptyTemplate'
