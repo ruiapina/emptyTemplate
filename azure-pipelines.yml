@@ -20,6 +20,6 @@ steps:
     location: 'West Europe'
     templateLocation: 'Linked artifact'
     csmFile: 'script/azuredeploy.json'
-    overrideParameters: '-webAppName Test '
+    overrideParameters: '-webAppName Test -linkedTemplateUri https://raw.githubusercontent.com/ruiapina/emptyTemplate/master/script/azuredeploy.parameters.json'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployTemplate'
