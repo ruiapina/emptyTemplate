@@ -20,5 +20,6 @@ steps:
     location: 'West Europe'
     templateLocation: 'Linked artifact'
     csmFile: 'script/azuredeploy.json'
+    overrideParameters: '-webAppName Test '
     deploymentMode: 'Incremental'
-    deploymentName: 'DeployEmptyTemplate'
+    deploymentName: 'DeployTemplate'
