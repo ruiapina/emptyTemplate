@@ -1,13 +1,16 @@
-wget -SO /dev/null http://in.archive.ubuntu.com/ubuntu/dists/xenial/InRelease
 
-wget -SO /dev/null http://archive.ubuntu.com/ubuntu/dists/xenial/InRelease
+#https://askubuntu.com/questions/842592/apt-get-fails-on-16-04-or-18-04-installing-mongodb
+sudo apt remove --autoremove mongodb-org
 
-# Configure mongodb.list file with the correct location
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+sudo rm /etc/apt/sources.list.d/mongodb*.list
+sudo apt update
 
-# Install updates
-sudo apt-get -y update
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 4B7C549A058F8B6B
 
-#Install Mongo DB
-sudo apt-get install -y mongodb-10gen
+echo "deb [arch=amd64] http://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
+
+sudo apt update
+sudo apt install mongodb-org
+
+systemctl enable mongod.service
+systemctl start mongod.service
